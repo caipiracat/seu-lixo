@@ -32,12 +32,20 @@
       function drawTable() {
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Cidade');
-        data.addColumn('number', 'IDH');
+        data.addColumn('number', 'Indice');
         data.addColumn('number', 'Lixo tratado');
+        data.addColumn('number', 'Lixo por habitante');
         data.addRows([
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'}],
-          ['Sorocaos',{v:0.23, f: '0,23'}, {v:60, f:'60%'}],
-          ['Rio grande da Serra',{v:0.86, f: '0,86'}, {v:40, f:'40%'}],
+          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
+          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
+          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
+          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
+          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
+          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
+          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
+          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
+          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
+          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ]
           ]);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
