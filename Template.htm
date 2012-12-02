@@ -11,9 +11,22 @@
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <!--Script de tabela do google =D -->
+      <script language="JavaScript" type="text/javascript">
+        var cont = 0;
+        function contador() {
+        document.getElementById('tempo').innerHTML=cont;
+          
+            cont = cont + 26.5;
+            setTimeout("contador()", 1000);
+          
+        }
+      </script>
+
+
+
     <script type='text/javascript' src='https://www.google.com/jsapi'></script>
     <script type='text/javascript'>
+    //Script de tabela do google =D
       google.load('visualization', '1', {packages:['table']});
       google.setOnLoadCallback(drawTable);
       function drawTable() {
@@ -80,7 +93,7 @@
 
     </script>
 
-
+    
     <style>
 
     /* GLOBAL STYLES
@@ -376,14 +389,15 @@
 
 
     <!-- Carousel
-    ================================================== -->
+    ================================================= -->
+    <!--
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
           <img src="./files/slide-01.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <!--<h1>Lixo</h1>-->
+              <!--<h1>Lixo</h1>-
               <p class="lead">Menos de 5% do lixo urbano é reciclado.</p>
               <a class="btn btn-large btn-primary" href="http://twitter.github.com/bootstrap/examples/carousel.html#">Sign up today</a>
             </div>
@@ -393,7 +407,7 @@
           <img src="./files/slide-02.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <!--<h1>Another example headline.</h1>-->
+              <!--<h1>Another example headline.</h1>-
               <p class="lead">30% do lixo produzido ficam espalhados pelas ruas nas grandes cidades.</p>
               <a class="btn btn-large btn-primary" href="http://twitter.github.com/bootstrap/examples/carousel.html#">Learn more</a>
             </div>
@@ -403,7 +417,7 @@
           <img src="./files/slide-03.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <!--<h1>One more for good measure.</h1>-->
+              <!--<h1>One more for good measure.</h1>-
               <p class="lead">Brasil ocupa a 84º posição no ranking de IDH.</p>
               <a class="btn btn-large btn-primary" href="http://twitter.github.com/bootstrap/examples/carousel.html#">Browse gallery</a>
             </div>
@@ -415,34 +429,35 @@
     </div><!-- /.carousel -->
 
 
-
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
+    <div class="container marketing" style = "margin-top: 100px">
 
+      <h2><p>    Desde que você entrou nesse site, o Brasil já coletou :<span id="tempo">-</span> Toneladas de lixo. </p></h2>
+      <h3><p>E de quem é a culpa?</h3></p>
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="span4">
-          <img class="img-circle" src="./files/140x140">
+         <!-- <img class="img-circle" src="./files/140x140">-->
           <h2>Classificação</h2>
           <div id='table_div'></div>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" src="./files/140x140">
+          <!--<img class="img-circle" src="./files/140x140">-->
           <h2>Lixo coletado</h2><div id="chart_div"></div>
           
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" src="./files/140x140">
+          <!--<img class="img-circle" src="./files/140x140">-->
           <h2>Destino do lixo no Brasil</h2>
           <p><div id='pie'></div></p>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
 
 
-      <!-- START THE FEATURETTES -->
+      <!-- START THE FEATURETTES --
 
       <hr class="featurette-divider">
 
@@ -508,6 +523,8 @@
         })
       }(window.jQuery)
     </script>
-
+    <script>
+      contador();
+    </script>
 
 </body></html>
