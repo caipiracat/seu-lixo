@@ -32,20 +32,14 @@
       function drawTable() {
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Cidade');
-        data.addColumn('number', 'Indice');
-        data.addColumn('number', 'Lixo tratado');
-        data.addColumn('number', 'Lixo por habitante');
+        data.addColumn('number', 'Lixo coletado');
+        data.addColumn('number', 'Kg de lixo por habitante');
         data.addRows([
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ],
-          ['Pindamonhangaba',{v:0.321, f: '0,321'}, {v:20, f:'20%'},{v:20, f:'20%'} ]
+          ['São Paulo', {v:20150.2, f:'20150.2'},{v:(20150.2 / 10434252)*1000, f: ((20150.2/10434252)* 1000).toFixed(2) + ""}],
+          ['Rio de Janeiro', {v:8343, f:'8343'},{v:(8343/5857904)*1000, f: ((8343/5857904)*1000).toFixed(2)+""} ],
+          ['Belo Horizonte', {v:4920.6, f:'4920,6'},{v:((4920/2238526)*1000), f:((4920.6/2238526)*1000).toFixed(2) + ""} ],
+          ['Goiania', {v:3270, f:'3270'},{v:((3270/1093007)*1000), f:((3270/1093007)*1000).toFixed(2)} ],
+          ['Brasilia', {v:2567.2, f:'2567.2'},{v:((2567.2/2051146)*1000), f:((2567.2/2051146)*1000).toFixed(2)} ]
           ]);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
@@ -59,12 +53,11 @@
         var data = google.visualization.arrayToDataTable([
           ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
           ['Quanditade de lixo coletado',    null,                 0,                             0],
-          ['Acre',   'Quanditade de lixo coletado',             60,                               60],
-          ['Alagoas',    'Quanditade de lixo coletado',             10,                           10],
-          ['Amapá',      'Quanditade de lixo coletado',             5,                            5],
-          ['Amazonas', 'Quanditade de lixo coletado',             5,                              5],
-          ['Bahia',    'Quanditade de lixo coletado',             5,                              5],
-          ['Outros',    'Quanditade de lixo coletado',            10,                             10],
+          ['São Paulo',   'Quanditade de lixo coletado',             20150,                               20150],
+          ['Rio de Janeiro',    'Quanditade de lixo coletado',             8343,                           8343],
+          ['Belo Horizonte',      'Quanditade de lixo coletado',             4920.6,                            4920.6],
+          ['Goiania', 'Quanditade de lixo coletado',             3270,                              3270],
+          ['Brasilia',    'Quanditade de lixo coletado',             2567.2,                              2567.2],
         ]);
 
         // Create and draw the visualization.
@@ -356,90 +349,9 @@
     <!-- NAVBAR
     ================================================== -->
     <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
-    <div class="container navbar-wrapper">
-
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Seu lixo</a>
-          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#contact">Contato</a></li>
-              <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-              <li class="dropdown">
-                <a href="http://twitter.github.com/bootstrap/examples/carousel.html#" class="dropdown-toggle" data-toggle="dropdown">Detalhe capitais<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="http://twitter.github.com/bootstrap/examples/carousel.html#">Aracaju</a></li>
-                  <li><a href="http://twitter.github.com/bootstrap/examples/carousel.html#">Belo Horizonte</a></li>
-                  <li><a href="http://twitter.github.com/bootstrap/examples/carousel.html#">Belém</a></li>
-                  <!--<li class="divider"></li>
-                  <li class="nav-header">Nav header</li>
-                  <li><a href="http://twitter.github.com/bootstrap/examples/carousel.html#">Separated link</a></li>
-                  <li><a href="http://twitter.github.com/bootstrap/examples/carousel.html#">One more separated link</a></li>
-                  -->
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!-- /.navbar-inner -->
-      </div><!-- /.navbar -->
-
-    </div><!-- /.container -->
 
 
 
-    <!-- Carousel
-    ================================================= -->
-    <!--
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="./files/slide-01.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <!--<h1>Lixo</h1>-
-              <p class="lead">Menos de 5% do lixo urbano é reciclado.</p>
-              <a class="btn btn-large btn-primary" href="http://twitter.github.com/bootstrap/examples/carousel.html#">Sign up today</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="./files/slide-02.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <!--<h1>Another example headline.</h1>-
-              <p class="lead">30% do lixo produzido ficam espalhados pelas ruas nas grandes cidades.</p>
-              <a class="btn btn-large btn-primary" href="http://twitter.github.com/bootstrap/examples/carousel.html#">Learn more</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="./files/slide-03.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <!--<h1>One more for good measure.</h1>-
-              <p class="lead">Brasil ocupa a 84º posição no ranking de IDH.</p>
-              <a class="btn btn-large btn-primary" href="http://twitter.github.com/bootstrap/examples/carousel.html#">Browse gallery</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="http://twitter.github.com/bootstrap/examples/carousel.html#myCarousel" data-slide="prev">‹</a>
-      <a class="right carousel-control" href="http://twitter.github.com/bootstrap/examples/carousel.html#myCarousel" data-slide="next">›</a>
-    </div><!-- /.carousel -->
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing" style = "margin-top: 100px">
 
@@ -505,10 +417,7 @@
 
 
       <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="http://twitter.github.com/bootstrap/examples/carousel.html#">Back to top</a></p>
-        <p>© 2012 Company, Inc. · <a href="http://twitter.github.com/bootstrap/examples/carousel.html#">Privacy</a> · <a href="http://twitter.github.com/bootstrap/examples/carousel.html#">Terms</a></p>
-      </footer>
+
 
     </div><!-- /.container -->
 

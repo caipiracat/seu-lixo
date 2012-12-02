@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://twitter.github.com/bootstrap/examples/carousel.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="./files/css/bootstrap.css" rel="stylesheet">
+    <link href="./files/css/bootstrap-responsive.css" rel="stylesheet">
+
+      <script language="JavaScript" type="text/javascript">
+        var cont = 0;
+        function contador() {
+        document.getElementById('tempo').innerHTML=cont;
+          
+            cont = cont + 25;
+            setTimeout("contador()", 1000);
+          
+        }
+      </script>
+
+
+
+    <script type='text/javascript' src='./files/jsapi.js'></script>
+    <script type='text/javascript'>
+    //Script de tabela do google =D
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Cidade');
+        data.addColumn('number', 'Lixo coletado');
+        data.addColumn('number', 'Kg de lixo por habitante');
+        data.addRows([
+          ['São Paulo', {v:20150.2, f:'20150.2'},{v:(20150.2 / 10434252)*1000, f: ((20150.2/10434252)* 1000).toFixed(2) + ""}],
+          ['Rio de Janeiro', {v:8343, f:'8343'},{v:(8343/5857904)*1000, f: ((8343/5857904)*1000).toFixed(2)+""} ],
+          ['Belo Horizonte', {v:4920.6, f:'4920,6'},{v:((4920/2238526)*1000), f:((4920.6/2238526)*1000).toFixed(2) + ""} ],
+          ['Goiania', {v:3270, f:'3270'},{v:((3270/1093007)*1000), f:((3270/1093007)*1000).toFixed(2)} ],
+          ['Brasilia', {v:2567.2, f:'2567.2'},{v:((2567.2/2051146)*1000), f:((2567.2/2051146)*1000).toFixed(2)} ]
+          ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+        table.draw(data, {showRowNumber: true});
+      }
+
+      google.load("visualization", "1", {packages:["treemap"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        // Create and populate the data table.
+        var data = google.visualization.arrayToDataTable([
+          ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
+          ['Quanditade de lixo coletado',    null,                 0,                             0],
+          ['São Paulo',   'Quanditade de lixo coletado',             20150,                               20150],
+          ['Rio de Janeiro',    'Quanditade de lixo coletado',             8343,                           8343],
+          ['Belo Horizonte',      'Quanditade de lixo coletado',             4920.6,                            4920.6],
+          ['Goiania', 'Quanditade de lixo coletado',             3270,                              3270],
+          ['Brasilia',    'Quanditade de lixo coletado',             2567.2,                              2567.2],
+        ]);
+
+        // Create and draw the visualization.
+        var tree = new google.visualization.TreeMap(document.getElementById('chart_div'));
+        tree.draw(data, {
+          minColor: '#f00',
+          midColor: '#ddd',
+          maxColor: '#0d0',
+          headerHeight: 20,
+          fontColor: 'black',
+          showScale: true});
+        }
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChartP);
+      function drawChartP() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['lixão',     48321],
+          ['Aterro controlado',  84575],
+          ['Aterro sanitário', 82640],
+          ['Estação de compostagem',    6549],
+          ['Outras',    7135]
+        ]);
+
+        var options = {
+          //title: 'Destino do lixo no Brasil'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('pie'));
+        chart.draw(data, options);
+      
+      }
+
+    </script>
+
+    
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: relative;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .carousel-control {
+      background-color: transparent;
+      border: 0;
+      font-size: 120px;
+      margin-top: 0;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-bottom: 100px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-bottom: 40px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  <style type="text/css"></style></head>
+
+  <body>
+
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
+
+
+
+
+    <div class="container marketing" style = "margin-top: 100px">
+
+
+
+      <center><h2><p>    Desde que você entrou nesse site, o Brasil coletou
+      <br>
+      <b><span id="tempo">-</span></b>
+      <br>
+     <b>Toneladas</b> de lixo! </p></h2></center>
+     <br>
+      <h3><p>E de quem é a culpa?</h3></p>
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+         <!-- <img class="img-circle" src="./files/140x140">-->
+          <h2>Classificação</h2>
+          <div id='table_div'></div>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <!--<img class="img-circle" src="./files/140x140">-->
+          <h2>Lixo coletado</h2><div id="chart_div"></div>
+          
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <!--<img class="img-circle" src="./files/140x140">-->
+          <h2>Destino do lixo no Brasil</h2>
+          <p><div id='pie'></div></p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES --
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="./files/browser-icon-chrome.png">
+        <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="./files/browser-icon-firefox.png">
+        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <h2>Lixo coletado</h2><div id="chart_div"></div>
+        <img class="featurette-image pull-right" src="./files/browser-icon-safari.png">
+        <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+
+
+    </div><!-- /.container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./files/jquery.js"></script>
+    <script src="./files/bootstrap-transition.js"></script>
+    <script src="./files/bootstrap-alert.js"></script>
+    <script src="./files/bootstrap-modal.js"></script>
+    <script src="./files/bootstrap-dropdown.js"></script>
+    <script src="./files/bootstrap-scrollspy.js"></script>
+    <script src="./files/bootstrap-tab.js"></script>
+    <script src="./files/bootstrap-tooltip.js"></script>
+    <script src="./files/bootstrap-popover.js"></script>
+    <script src="./files/bootstrap-button.js"></script>
+    <script src="./files/bootstrap-collapse.js"></script>
+    <script src="./files/bootstrap-carousel.js"></script>
+    <script src="./files/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script>
+      contador();
+    </script>
+
+</body></html>
