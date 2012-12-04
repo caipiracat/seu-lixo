@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://twitter.github.com/bootstrap/examples/carousel.html -->
+<html lang="pt-BR">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Seulixo</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+ <!-- menu -->
+<!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
+    <div class="container navbar-wrapper">
+
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#index">Seu lixo</a>
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="dropdown">
+                <a href="http://twitter.github.com/bootstrap/examples/carousel.html#" class="dropdown-toggle" data-toggle="dropdown">Detalhes<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#tabela">Tabela</a></li>
+                  <li><a href="#treemap">Treemap</a></li>
+                  <!-- <li><a href="http://twitter.github.com/bootstrap/examples/carousel.html#">Belém</a></li> -->
+                </ul>
+              <!-- <li class="active"><a href="#index">Home</a></li>
+               --><li><%= link_to "Sobre", "sobre.html" %></li>
+              <li><a href="#contact">Contato</a></li>
+              <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+                  <!--<li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="http://twitter.github.com/bootstrap/examples/carousel.html#">Separated link</a></li>
+                  <li><a href="http://twitter.github.com/bootstrap/examples/carousel.html#">One more separated link</a></li>
+                  -->
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!-- /.navbar-inner -->
+      </div><!-- /.navbar -->
+
+    </div><!-- /.container -->
+    <!-- /menu -->
+
+
+    <div class="container marketing" style = "margin-top: 100px">
+    <center><h2><p>    Desde que você entrou nesse site, o Brasil coletou
+      <br />
+      <b><span id="tempo">-</span></b>
+      <br />
+     <b>TONELADAS</b> de lixo!</p></h2></center>
+     <br />
+      <h3><p>E de quem é a culpa?</h3></p>
+      
+
+  <%= yield %>
+  
+  <footer>
+      <p>© 2012 Company, Inc.</p>
+    </footer>
+  </div>
+
+  <script>
+      contador();
+    </script>
+</body>
+</html>

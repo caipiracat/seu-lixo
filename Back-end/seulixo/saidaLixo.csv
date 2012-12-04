@@ -1,0 +1,61 @@
+"nome","total","ceu_aberto","areas_alagadas","aterro_controlado","aterro_sanitario","compostagem","triagem","incineracao","nao_fixo","outros","ano"
+Brasil,228413.0,48321.7,232.6,84575.5,82640.3,6549.7,2265.0,1031.8,1230.2,1566.2,2000
+Norte,11067.1,6279.0,56.3,3133.9,1468.8,5,0,8.1,95.6,20.4,2000
+Porto Velho,193.4,193.4,0,0,0,0,0,0,0,0,2000
+Rio Branco,236.2,0,0,0,236.2,0,0,0,0,0,2000
+Manaus,2400.0,0,0,2400.0,0,0,0,0,0,0,2000
+Boa Vista,105,105,0,0,0,0,0,0,0,0,2000
+Belém,2012.0,832,0,300,880,0,0,0,0,0,2000
+Região Metropolitana de Belém,2697.0,1517.0,0,300,880,0,0,0,0,0,2000
+Macapá,380,380,0,0,0,0,0,0,0,0,2000
+Palmas,81,0,0,81,0,0,0,0,0,0,2000
+Nordeste,41557.8,20043.5,45,6071.9,15030.1,74,92.5,22.4,128.4,50,2000
+São Luís,740,0,0,0,740,0,0,0,0,0,2000
+Região Metropolitana Grande São Luís,750,10,0,0,740,0,0,0,0,0,2000
+Teresina,1059.5,0,0,996.7,62.8,0,0,0,0,0,2000
+Fortaleza,2375.0,0,0,0,2375.0,0,0,0,0,0,2000
+Região Metropolitana de Fortaleza,7211.2,103,0,7.2,7101.0,0,0,0,0,0,2000
+Natal,1223.5,0,0,1223.0,0,0.5,0,0,0,0,2000
+Região Metropolitana de Natal,1385.5,27,0,1318.0,40,0.5,0,0,0,0,2000
+João Pessoa,1027.9,1027.9,0,0,0,0,0,0,0,0,2000
+Recife,1376.0,0,0,0,1376.0,0,0,0,0,0,2000
+Região Metropolitana de Recife,3221.0,675.4,0,330,2099.3,35,30,1.3,0,50,2000
+Maceió,1592.0,542,0,1050.0,0,0,0,0,0,0,2000
+Região Metropolitana de Maceió,1773.0,708,0,1065.0,0,0,0,0,0,0,2000
+Aracaju,410,0,0,410,0,0,0,0,0,0,2000
+Salvador,2490.5,0,0,0,2476.5,0,14,0,0,0,2000
+Região Metropolitana de Salvador,2940.5,0,0,210.2,2716.3,0,14,0,0,0,2000
+Sudeste,141616.8,13755.9,86.6,65851.4,52542.3,5437.9,1262.9,945.2,781.4,953.2,2000
+Belo Horizonte,4920.6,0,0,400,4227.6,3.7,16.3,0,0,273,2000
+Região Metropolitana de Belo Horizonte,6889.7,403,0,1604.1,4368.6,18.7,26.3,0,196,273,2000
+Colar Metropolitano da Região Metropolitana de Belo Horizonte,186.1,102.2,0,54.2,0,0,14.4,0.3,15,0,2000
+Região Metropolitana Vale do Aço,402,202,0,0,140,60,0,0,0,0,2000
+Colar Metropolitano da Região Metropolitana Vale do Aço,59.7,43.5,0,14.8,0,0.4,1,0,0,0,2000
+Vitória,318,0,0,3,295,0,20,0,0,0,2000
+Região Metropolitana Grande Vitória,1465.8,135,0,273,1000.5,0,20,0,37.3,0,2000
+Rio de Janeiro,8343.0,0,0,1951.0,6124.0,268,0,0,0,0,2000
+Região Metropolitana do Rio de Janeiro,13429.4,3313.0,20,3020.4,6805.0,268,0,3,0,0,2000
+São Paulo,20150.2,0,0,0,15426.5,4290.0,331,102.7,0,0,2000
+Região Metropolitana de São Paulo,83066.9,491,0,51669.9,25111.7,4290.0,346.1,635.9,1,521.3,2000
+Região Metropolitana Baixada Santista,1659.1,150,0,995.8,511.5,0,0.5,1.3,0,0,2000
+Região Metropolitana de Campinas,3508.2,63,10,920.2,2485.1,0,21.8,2.1,0,6,2000
+Sul,19874.8,5112.3,36.7,4833.9,8046.0,347.2,832.6,30.1,119.9,516.1,2000
+Curitiba,1548.9,0,0,0,1547.5,0,0,1.4,0,0,2000
+Região Metropolitana de Curitiba,2131.8,114,0,7.5,1982.4,25,1.5,1.4,0,0,2000
+Região Metropolitana de Londrina,838.9,410.8,0,415.1,0,0,13,0,0,0,2000
+Região Metropolitana de Maringá,460.9,443.7,7,1.2,9,0,0,0,0,0,2000
+Florianópolis,435,0,0,0,435,0,0,0,0,0,2000
+Núcleo Metropolitano da Região Metropolitana de Florianópolis,710.7,0,0,42.5,668.2,0,0,0,0,0,2000
+Área de Expansão Metropolitana da Região Metropolitana de Florianópolis,78.8,43.6,0,14.1,20,0,1,0.1,0,0,2000
+Núcleo Metropolitano da Região Metropolitana do Vale do Itajaí,601.2,0,0,497.3,95,0,8.9,0,0,0,2000
+Área de Expansão Metropolitana da Região Metropolitana do Vale do Itajaí,180.1,8,0,43.1,76,0,3,0,50,0,2000
+Núcleo Metropolitano da Região Metropolitana Norte/Nordeste Catarinense,514.3,16.1,0,0,498.2,0,0,0,0,0,2000
+Área de Expansão Metropolitana da Região Metropolitana Norte/Nordeste Catarinense,345.4,86.8,0,176.9,80,0,1.5,0.2,0,0,2000
+Porto Alegre,1610.0,0,0,0,1050.0,0,60,0,0,500,2000
+Região Metropolitana de Porto Alegre,3566.2,75.5,0,753.5,1963.4,8.7,250.1,10,0,505,2000
+Centro-Oeste,14296.5,3131.0,8,4684.4,5553.1,685.6,77,26,104.9,26.5,2000
+Campo Grande,496.4,46.4,0,450,0,0,0,0,0,0,2000
+Cuiabá,630,0,0,0,442,164,24,0,0,0,2000
+Goiânia,3270.0,0,0,0,3270.0,0,0,0,0,0,2000
+Região Metropolitana de Goiânia,3709.7,63.7,0,124,3522.0,0,0,0,0,0,2000
+Brasília,2567.2,0,0,2021.9,0,521.6,0,23.7,0,0,2000

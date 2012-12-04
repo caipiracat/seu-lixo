@@ -1,0 +1,43 @@
+
+      <div id="par_table" display="none"></div>
+      <div class="row">
+        <div class="span4">
+         <!-- <img class="img-circle" src="./files/140x140">-->
+          <h2>Classificação</h2>
+          <div id='table_div'></div>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <!--<img class="img-circle" src="./files/140x140">-->
+          <h2>Lixo coletado</h2><div id="chart_div"></div>
+          
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <!--<img class="img-circle" src="./files/140x140">-->
+          <h2>Destino do lixo no Brasil</h2>
+          <p><div id='pie'></div></p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+      <script type="text/javascript">
+      /* O Mellinho vai aqui */
+        google.load('visualization', '1', {packages:['table']});
+        google.setOnLoadCallback(drawTable);
+        function drawTable() {
+          //rails magico
+          <% 
+            lixo = Lixo.all
+            lixo = lixo.sort_by &:total
+
+            tamanho = lixo.size
+          %>
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Cidade');
+          data.addColumn('number', 'indice');  
+          //data.addColumn('number', 'IDH');
+          data.addColumn('number', 'Lixo coletado');
+          data.addRows([
+
+            
+              cidade = Localidade.find(i.owner)
+            
+            ]);
+      </script>
