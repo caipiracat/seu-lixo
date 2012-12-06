@@ -17,9 +17,10 @@
         document.getElementById('tempo').innerHTML=cont;
           
             cont = cont + 25;
+
             setTimeout("contador()", 1000);
           
-        }
+      }
       </script>
 
 
@@ -45,19 +46,19 @@
         var table = new google.visualization.Table(document.getElementById('table_div'));
         table.draw(data, {showRowNumber: true});
       }
-
+/*
       google.load("visualization", "1", {packages:["treemap"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         // Create and populate the data table.
         var data = google.visualization.arrayToDataTable([
           ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
-          ['Quanditade de lixo coletado',    null,                 0,                             0],
-          ['São Paulo',   'Quanditade de lixo coletado',             20150,                               20150],
-          ['Rio de Janeiro',    'Quanditade de lixo coletado',             8343,                           8343],
-          ['Belo Horizonte',      'Quanditade de lixo coletado',             4920.6,                            4920.6],
-          ['Goiania', 'Quanditade de lixo coletado',             3270,                              3270],
-          ['Brasilia',    'Quanditade de lixo coletado',             2567.2,                              2567.2],
+          ['Quanditade de lixo coletado',    null,                 0,                             -0],
+          ['São Paulo',   'Quanditade de lixo coletado',             20150,                               -20150],
+          ['Rio de Janeiro',    'Quanditade de lixo coletado',             8343,                           -8343],
+          ['Belo Horizonte',      'Quanditade de lixo coletado',             4920.6,                            -4920.6],
+          ['Goiania', 'Quanditade de lixo coletado',             3270,                              -3270],
+          ['Brasilia',    'Quanditade de lixo coletado',             2567.2,                              -2567.2],
         ]);
 
         // Create and draw the visualization.
@@ -70,6 +71,31 @@
           fontColor: 'black',
           showScale: true});
         }
+*/
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Cidade', 'Quantidade'],
+          ['São Paulo',  20150],
+          ['Rio de Janeiro',  8343],
+          ['Belo Horizonte',  4920.6],
+          ['Goiania',  3270],
+          ['Brasilia',  2567.2],
+          
+        ]);
+
+        var options = {
+          title: 'Quantidade de lixo coletado por cidade (toneladas)',
+          hAxis: {title: 'Cidade', titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('div_barras'));
+        chart.draw(data, options);
+      }
+
+
 
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChartP);
@@ -373,7 +399,7 @@
         </div><!-- /.span4 -->
         <div class="span4">
           <!--<img class="img-circle" src="./files/140x140">-->
-          <h2>Lixo coletado</h2><div id="chart_div"></div>
+          <h2>Lixo coletado</h2><div id="div_barras"></div>
           
         </div><!-- /.span4 -->
         <div class="span4">
