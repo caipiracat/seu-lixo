@@ -1,28 +1,28 @@
-"name","total","open_air","wetlands","landfill","sanitary_landfill","composting","screening","incineration",not_fixed,"others"
-"Porto Velho",193.4,193.4,nil,nil,nil,nil,nil,nil,nil,nil,2000
-"Rio Branco",236.2,nil,nil,nil,236.2,nil,nil,nil,nil,nil,2000
-"Manaus",2400.0,nil,nil,2400.0,nil,nil,nil,nil,nil,nil,2000
-"Boa Vista",105.0,105.0,nil,nil,nil,nil,nil,nil,nil,nil,2000
-"Belém",2012.0,832.0,nil,300.0,880.0,nil,nil,nil,nil,nil,2000
-"Macapá",380.0,380.0,nil,nil,nil,nil,nil,nil,nil,nil,2000
-"Palmas",81.0,nil,nil,81.0,nil,nil,nil,nil,nil,nil,2000
-"São Luís",740.0,nil,nil,nil,740.0,nil,nil,nil,nil,nil,2000
-"Teresina",1059.5,nil,nil,996.7,62.8,nil,nil,nil,nil,nil,2000
-"Fortaleza",2375.0,nil,nil,nil,2375.0,nil,nil,nil,nil,nil,2000
-"Natal",1223.5,nil,nil,1223.0,nil,0.5,nil,nil,nil,nil,2000
-"João Pessoa",1027.9,1027.9,nil,nil,nil,nil,nil,nil,nil,nil,2000
-"Recife",1376.0,nil,nil,nil,1376.0,nil,nil,nil,nil,nil,2000
-"Maceió",1592.0,542.0,nil,1050.0,nil,nil,nil,nil,nil,nil,2000
-"Aracaju",410.0,nil,nil,410.0,nil,nil,nil,nil,nil,nil,2000
+"name","state","total","open_air","wetlands","landfill","sanitary_landfill","composting","screening","incineration",not_fixed,"others"
+"Porto Velho","RO",193.4,193.4,nil,nil,nil,nil,nil,nil,nil,nil,2000
+"Rio Branco","AC",236.2,nil,nil,nil,236.2,nil,nil,nil,nil,nil,2000
+"Manaus","AM",2400.0,nil,nil,2400.0,nil,nil,nil,nil,nil,nil,2000
+"Boa Vista","RR",105.0,105.0,nil,nil,nil,nil,nil,nil,nil,nil,2000
+"Belém","PA",2012.0,832.0,nil,300.0,880.0,nil,nil,nil,nil,nil,2000
+"Macapá","AP",380.0,380.0,nil,nil,nil,nil,nil,nil,nil,nil,2000
+"Palmas","TO",81.0,nil,nil,81.0,nil,nil,nil,nil,nil,nil,2000
+"São Luís","MA",740.0,nil,nil,nil,740.0,nil,nil,nil,nil,nil,2000
+"Teresina","PI",1059.5,nil,nil,996.7,62.8,nil,nil,nil,nil,nil,2000
+"Fortaleza","CE",2375.0,nil,nil,nil,2375.0,nil,nil,nil,nil,nil,2000
+"Natal","RN",1223.5,nil,nil,1223.0,nil,0.5,nil,nil,nil,nil,2000
+"João Pessoa","PB",1027.9,1027.9,nil,nil,nil,nil,nil,nil,nil,nil,2000
+"Recife","PE",1376.0,nil,nil,nil,1376.0,nil,nil,nil,nil,nil,2000
+"Maceió","AL",1592.0,542.0,nil,1050.0,nil,nil,nil,nil,nil,nil,2000
+"Aracaju","SE",410.0,nil,nil,410.0,nil,nil,nil,nil,nil,nil,2000
 "Salvador",2490.5,nil,nil,nil,2476.5,nil,14.0,nil,nil,nil,2000
-"Belo Horizonte",4920.6,nil,nil,400.0,4227.6,3.7,16.3,nil,nil,273,2000
-"Vitória",318.0,nil,nil,3.0,295.0,nil,20.0,nil,nil,nil,2000
-"Rio de Janeiro",8343.0,nil,nil,1951.0,6124.0,268.0,nil,nil,nil,nil,2000
-"São Paulo",20150.2,nil,nil,nil,15426.5,4290.0,331.0,102.7,nil,nil,2000
-"Curitiba",1548.9,nil,nil,nil,1547.5,nil,nil,1.4,nil,nil,2000
-"Florianópolis",435.0,nil,nil,nil,435.0,nil,nil,nil,nil,nil,2000
-"Porto Alegre",1610.0,nil,nil,nil,1050.0,nil,60.0,nil,nil,500.0,2000
-"Campo Grande",496.4,46.4,nil,450.0,nil,nil,nil,nil,nil,nil,2000
-"Cuiabá",630.0,nil,nil,nil,442.0,164.0,24.0,nil,nil,nil,2000
-"Goiânia",3270.0,nil,nil,nil,3270.0,nil,nil,nil,nil,nil,2000
-"Brasília",2567.2,nil,nil,2021.9,nil,521.6,nil,23.7,nil,nil,2000
+"Belo Horizonte","MG",4920.6,nil,nil,400.0,4227.6,3.7,16.3,nil,nil,273,2000
+"Vitória","ES",318.0,nil,nil,3.0,295.0,nil,20.0,nil,nil,nil,2000
+"Rio de Janeiro","RJ",8343.0,nil,nil,1951.0,6124.0,268.0,nil,nil,nil,nil,2000
+"São Paulo","SP",20150.2,nil,nil,nil,15426.5,4290.0,331.0,102.7,nil,nil,2000
+"Curitiba","PR",1548.9,nil,nil,nil,1547.5,nil,nil,1.4,nil,nil,2000
+"Florianópolis","SC",435.0,nil,nil,nil,435.0,nil,nil,nil,nil,nil,2000
+"Porto Alegre","RS",1610.0,nil,nil,nil,1050.0,nil,60.0,nil,nil,500.0,2000
+"Campo Grande","MS",496.4,46.4,nil,450.0,nil,nil,nil,nil,nil,nil,2000
+"Cuiabá","MT",630.0,nil,nil,nil,442.0,164.0,24.0,nil,nil,nil,2000
+"Goiânia","GO",3270.0,nil,nil,nil,3270.0,nil,nil,nil,nil,nil,2000
+"Brasília","DF",2567.2,nil,nil,2021.9,nil,521.6,nil,23.7,nil,nil,2000
