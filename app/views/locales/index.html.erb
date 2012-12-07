@@ -1,3 +1,12 @@
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
+<h2><%= t 'info.your_city' %></h2>
+
+<%= form_tag html: { class: 'form-search' } do %>
+  <%= text_field_tag :locale, nil, id: 'locales', class: 'input-xxlarge search-query', data: { source: @locales.collect(&:name) } %>
+  <%= submit_tag( t('search'), class: 'btn' ) %>
+<% end %>
+
 <h1>Listing locales</h1>
 
 <table>
