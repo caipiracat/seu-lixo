@@ -1,0 +1,23 @@
+<h1>Listing garbages</h1>
+
+<table>
+  <tr>
+    <th>Total</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @garbages.each do |garbage| %>
+  <tr>
+    <td><%= garbage.total %></td>
+    <td><%= link_to 'Show', garbage %></td>
+    <td><%= link_to 'Edit', edit_garbage_path(garbage) %></td>
+    <td><%= link_to 'Destroy', garbage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Garbage', new_garbage_path %>

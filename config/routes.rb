@@ -1,4 +1,5 @@
 Seulixo::Application.routes.draw do
+  resources :garbages
   resources :localidades
 
   root :to => "localidades#index"

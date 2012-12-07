@@ -1,0 +1,21 @@
+<%= simple_form_for(@garbage) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :total %>
+    <%= f.input :composting %>
+    <%= f.input :incineration %>
+    <%= f.input :landfill %>
+    <%= f.input :not_fixed %>
+    <%= f.input :open_air %>
+    <%= f.input :others %>
+    <%= f.input :sanitary_landfill %>
+    <%= f.input :screening %>
+    <%= f.input :wetlands %>
+    <%= f.input :year %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
