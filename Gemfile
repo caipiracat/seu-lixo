@@ -38,5 +38,6 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development, :test do
+  gem 'factory_girl_rails', '~> 4.1.0'
   gem 'rspec-rails', '~> 2.12.0'
 end
