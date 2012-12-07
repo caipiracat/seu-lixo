@@ -1,14 +1,16 @@
+require 'csv'
+
 class ImportLocalesData
   def read_in_csv_localidade
-    csv_text = File.read('habitantesTotal.csv')
+    csv_text = File.read('db/data/tratados/localidadeTratados.csv')
 
     csv = CSV.parse(csv_text, :headers => true)
 
     csv.each do |row|
       row = row.to_hash.with_indifferent_access
       locale = Locale.new
-      locale.name = row[:nome]
-      locale.population = row[:habitantes]
+      locale.name = row[:name]
+      locale.population = row[:population]
       locale.save
     end
   end
