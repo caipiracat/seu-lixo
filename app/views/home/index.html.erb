@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+    <script src="./files/jquery.js"></script>
 
     <!-- Le styles -->
     <link href="./files/css/bootstrap.css" rel="stylesheet">
@@ -28,6 +30,10 @@
     <script type='text/javascript' src='./files/jsapi.js'></script>
     <script type='text/javascript'>
     
+    var cities = <%= raw @data.to_json %>;
+    
+    
+    
     
     var city_values = [
       ['São Paulo', {v:20150.2, f:'20150.2'},{v:(20150.2 / 10434252)*1000, f: ((20150.2/10434252)* 1000).toFixed(2) + ""}],
@@ -36,6 +42,19 @@
       ['Goiania', {v:3270, f:'3270'},{v:((3270/1093007)*1000), f:((3270/1093007)*1000).toFixed(2)} ],
       ['Brasilia', {v:2567.2, f:'2567.2'},{v:((2567.2/2051146)*1000), f:((2567.2/2051146)*1000).toFixed(2)} ]
     ]
+    
+    
+    var city_values2 = new Array();
+    
+    $(function() {
+
+      $(cities).each(function(index) {
+        city_values2.push([ this.name, { v:this.garbage, f:this.garbage.toString() }, { v:this.garbage_per_capita, f:this.garbage_per_capita.toString() } ]);
+      });
+
+      console.log(city_values2);
+    });
+    
     
     
     
@@ -47,7 +66,7 @@
         data.addColumn('string', 'Cidade');
         data.addColumn('number', 'Lixo coletado');
         data.addColumn('number', 'Kg de lixo por habitante');
-        data.addRows(city_values);
+        data.addRows(city_values2);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
         table.draw(data, {showRowNumber: true});
@@ -481,7 +500,7 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./files/jquery.js"></script>
+    
     <script src="./files/bootstrap-transition.js"></script>
     <script src="./files/bootstrap-alert.js"></script>
     <script src="./files/bootstrap-modal.js"></script>
