@@ -31,28 +31,14 @@
     <script type='text/javascript'>
     
     var cities = <%= raw @data.to_json %>;
-    
-    
-    
-    
-    var city_values = [
-      ['São Paulo', {v:20150.2, f:'20150.2'},{v:(20150.2 / 10434252)*1000, f: ((20150.2/10434252)* 1000).toFixed(2) + ""}],
-      ['Rio de Janeiro', {v:8343, f:'8343'},{v:(8343/5857904)*1000, f: ((8343/5857904)*1000).toFixed(2)+""} ],
-      ['Belo Horizonte', {v:4920.6, f:'4920,6'},{v:((4920/2238526)*1000), f:((4920.6/2238526)*1000).toFixed(2) + ""} ],
-      ['Goiania', {v:3270, f:'3270'},{v:((3270/1093007)*1000), f:((3270/1093007)*1000).toFixed(2)} ],
-      ['Brasilia', {v:2567.2, f:'2567.2'},{v:((2567.2/2051146)*1000), f:((2567.2/2051146)*1000).toFixed(2)} ]
-    ]
-    
-    
-    var city_values2 = new Array();
+
+    var city_values = new Array();
     
     $(function() {
 
       $(cities).each(function(index) {
-        city_values2.push([ this.name, { v:this.garbage, f:this.garbage.toString() }, { v:this.garbage_per_capita, f:this.garbage_per_capita.toString() } ]);
+        city_values.push([ this.name, { v:this.garbage, f:this.garbage.toString() }, { v:this.garbage_per_capita, f:this.garbage_per_capita.toString() } ]);
       });
-
-      console.log(city_values2);
     });
     
     
@@ -66,7 +52,7 @@
         data.addColumn('string', 'Cidade');
         data.addColumn('number', 'Lixo coletado');
         data.addColumn('number', 'Kg de lixo por habitante');
-        data.addRows(city_values2);
+        data.addRows(city_values);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
         table.draw(data, {showRowNumber: true});
