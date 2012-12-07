@@ -1,0 +1,15 @@
+<%= simple_form_for(@idh) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :idhm %>
+    <%= f.input :education %>
+    <%= f.input :income %>
+    <%= f.input :longevity %>
+    <%= f.input :year %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

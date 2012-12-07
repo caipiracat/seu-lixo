@@ -1,4 +1,5 @@
 Seulixo::Application.routes.draw do
+  resources :idhs
   resources :garbages
   resources :localidades
 

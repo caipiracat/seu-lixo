@@ -1,0 +1,21 @@
+<h1>Listing idhs</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @idhs.each do |idh| %>
+  <tr>
+    <td><%= link_to 'Show', idh %></td>
+    <td><%= link_to 'Edit', edit_idh_path(idh) %></td>
+    <td><%= link_to 'Destroy', idh, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Idh', new_idh_path %>

@@ -1,6 +1,7 @@
 pt-BR:
   models:
     garbage: lixo
+    idh: IDH
   attributes:
     composting: compostagem
     incineration: incineração
@@ -13,3 +14,7 @@ pt-BR:
     total: total
     wetlands: áreas alagadas
     year: ano
+    education: educação
+    idhm: IDH municipal
+    income: renda
+    longevity: longevidade
