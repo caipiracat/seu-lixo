@@ -13,7 +13,10 @@ class LocalesController < ApplicationController
   # GET /locales/1
   # GET /locales/1.json
   def show
-    @locale = Locale.find(params[:id])
+    city = params[:locale].match(/(.*), (.*)/)[1]
+    state = params[:locale].match(/(.*), (.*)/)[2]
+
+    @locale = Locale.where(name: city, state: state).first
 
     respond_to do |format|
       format.html # show.html.erb
