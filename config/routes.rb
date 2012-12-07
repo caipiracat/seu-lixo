@@ -3,7 +3,7 @@ Seulixo::Application.routes.draw do
   resources :garbages
   resources :localidades
 
-  root :to => "localidades#index"
+  root to: 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
