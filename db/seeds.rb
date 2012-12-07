@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+ImportLocalesData.new.read_in_csv_localidade
+ImportIdhData.new.read_in_csv_idh
+ImportGarbageData.new.read_in_csv_lixo
