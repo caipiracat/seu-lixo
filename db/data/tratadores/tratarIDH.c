@@ -7,8 +7,8 @@ int main(){
 	int i, j; // variaveis auxiliares
 	int ignorar; // flag para ignorar caracteres ou nao
 
-	entrada = fopen("IDHmunicipio.csv", "r");
-	saida = fopen("saidaIDH.csv", "w");
+	entrada = fopen("../brutos/idhm2000.csv", "r");
+	saida = fopen("../tratados/idhm2000.csv", "w");
 
 	while(fgets(linhaOriginal, 200, entrada) != NULL){
 		// inicializando variaveis
@@ -23,34 +23,30 @@ int main(){
 		j++;
 
 		for(i = 0; i < strlen(linhaOriginal); i++){
-			// quebra o laço no \n
+			if(linhaOriginal[i] == '('){
+				linhaSaida[j-1] = '"';
+				linhaSaida[j] = ',';
+				j++;
+				linhaSaida[j] = '"';
+				j++;
+				continue;
+			}
+			if(linhaOriginal[i] == ')'){
+				linhaSaida[j] = '"';
+				j++;
+				continue;
+			}
 			if(linhaOriginal[i] == '\n'){
 				linhaSaida[j-1] = '\0';
 				break;
 			}
+			linhaSaida[j] = linhaOriginal[i];
+			j++;
 
-			// caso os parametros estejam entre () são ignorados
-			if(linhaOriginal[i] == '('){
-				ignorar = 1;
-				linhaSaida[j-1] = '"';
-				continue;
-			}
-			if(linhaOriginal[i] == ')'){
-				ignorar = 0;
-				continue;
-			}
-
-			// caso os parametros não estejam entre () são inseridos no arquivo de saida
-			if(ignorar == 0){
-				linhaSaida[j] = linhaOriginal[i];
-				j++;
-			}else{
-				continue;
-			}
 		}
 
 		// inserindo ,2000 e \n no fim da linha e gravando no arquivo de saida
-		fprintf(saida, "%s,2000\n", linhaSaida);
+		fprintf(saida,"%s,2000\n", linhaSaida);
 
 	}
 
