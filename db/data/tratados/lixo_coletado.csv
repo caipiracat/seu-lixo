@@ -1,72 +1,50 @@
-#falta colocar os HEADERS aqui!!
+"name","total","open_air","wetlands","landfill","sanitary_landfill","composting","screening","incineration",not_fixed,"others"
 "Brasil",228413.0,48321.7,232.6,84575.5,82640.3,6549.7,2265.0,1031.8,1230.2,1566.2,2000
 "Norte",11067.1,6279.0,56.3,3133.9,1468.8,5.0,nil,8.1,95.6,20.4,2000
 "Rondônia",692.0,537.8,nil,122.3,31.9,nil,nil,nil,nil,nil,2000
-"Porto Velho",193.4,193.4,nil,nil,nil,nil,nil,nil,nil,nil,2000
 "Acre",538.9,269.2,nil,27.0,242.7,nil,nil,nil,nil,nil,2000
-"Rio Branco",236.2,nil,nil,nil,236.2,nil,nil,nil,nil,nil,2000
 "Amazonas",2864.0,327.8,12.0,2424.6,27.6,nil,nil,0.7,70.0,1.3,2000
-"Manaus",2400.0,nil,nil,2400.0,nil,nil,nil,nil,nil,nil,2000
 "Roraima",133.1,133.1,nil,nil,nil,nil,nil,nil,nil,nil,2000
-"Boa Vista",105.0,105.0,nil,nil,nil,nil,nil,nil,nil,nil,2000
 "Pará",5181.6,3725.0,42.5,371.5,1007.5,5.0,nil,7.0,4.0,19.1,2000
-"Belém",2012.0,832.0,nil,300.0,880.0,nil,nil,nil,nil,nil,2000
 "Região Metropolitana de Belém",2697.0,1517.0,nil,300.0,880.0,nil,nil,nil,nil,nil,2000
 "Amapá",455.8,453.6,1.8,nil,nil,nil,nil,0.4,nil,nil,2000
-"Macapá",380.0,380.0,nil,nil,nil,nil,nil,nil,nil,nil,2000
 "Tocantins",1201.7,832.5,nil,188.5,159.1,nil,nil,nil,21.6,nil,2000
-"Palmas",81.0,nil,nil,81.0,nil,nil,nil,nil,nil,nil,2000
 "Nordeste",41557.8,20043.5,45.0,6071.9,15030.1,74.0,92.5,22.4,128.4,50.0,2000
 "Maranhão",2652.6,1839.1,nil,59.3,740.0,3.1,9.0,2.1,nil,nil,2000
-"São Luís",740.0,nil,nil,nil,740.0,nil,nil,nil,nil,nil,2000
 "Região Metropolitana Grande São Luís",750.0,10.0,nil,nil,740.0,nil,nil,nil,nil,nil,2000
 "Piauí",2431.3,1243.8,40.0,1056.7,90.8,nil,nil,nil,nil,nil,2000
-"Teresina",1059.5,nil,nil,996.7,62.8,nil,nil,nil,nil,nil,2000
 "Ceará",10150.5,2751.6,nil,77.6,7306.5,nil,nil,nil,14.8,nil,2000
-"Fortaleza",2375.0,nil,nil,nil,2375.0,nil,nil,nil,nil,nil,2000
 "Região Metropolitana de Fortaleza",7211.2,103.0,nil,7.2,7101.0,nil,nil,nil,nil,nil,2000
 "Rio Grande do Norte",2373.5,715.3,5.0,1426.1,219.6,0.5,6.0,nil,1.0,nil,2000
-"Natal",1223.5,nil,nil,1223.0,nil,0.5,nil,nil,nil,nil,2000
 "Região Metropolitana de Natal",1385.5,27.0,nil,1318.0,40.0,0.5,nil,nil,nil,nil,2000
 "Paraíba",2894.0,2691.1,nil,94.2,67.1,26.0,14.6,1.0,nil,nil,2000
-"João Pessoa",1027.9,1027.9,nil,nil,nil,nil,nil,nil,nil,nil,2000
 "Pernambuco",6281.2,3022.1,nil,812.0,2301.3,38.5,48.0,1.3,8.0,50.0,2000
-"Recife",1376.0,nil,nil,nil,1376.0,nil,nil,nil,nil,nil,2000
 "Região Metropolitana de Recife",3221.0,675.4,nil,330.0,2099.3,35.0,30.0,1.3,nil,50.0,2000
 "Alagoas",2999.3,1698.3,nil,1096.0,185.0,5.5,nil,4.0,10.5,nil,2000
-"Maceió",1592.0,542.0,nil,1050.0,nil,nil,nil,nil,nil,nil,2000
 "Região Metropolitana de Maceió",1773.0,708.0,nil,1065.0,nil,nil,nil,nil,nil,nil,2000
 "Sergipe",1377.1,768.0,nil,579.1,30.0,nil,nil,nil,nil,nil,2000
-"Aracaju",410.0,nil,nil,410.0,nil,nil,nil,nil,nil,nil,2000
 "Bahia",10398.3,5314.2,nil,870.9,4089.8,0.4,14.9,14.0,94.1,nil,2000
-"Salvador",2490.5,nil,nil,nil,2476.5,nil,14.0,nil,nil,nil,2000
 "Região Metropolitana de Salvador",2940.5,nil,nil,210.2,2716.3,nil,14.0,nil,nil,nil,2000
 "Sudeste",141616.8,13755.9,86.6,65851.4,52542.3,5437.9,1262.9,945.2,781.4,953.2,2000
 "Minas Gerais",15664.0,4778.6,19.6,4181.6,5296.8,308.5,284.3,62.0,376.6,356,2000
-"Belo Horizonte",4920.6,nil,nil,400.0,4227.6,3.7,16.3,nil,nil,273,2000
 "Região Metropolitana de Belo Horizonte",6889.7,403.0,nil,1604.1,4368.6,18.7,26.3,nil,196.0,273,2000
 "Colar Metropolitano da Região Metropolitana de Belo Horizonte",186.1,102.2,nil,54.2,nil,nil,14.4,0.3,15.0,nil,2000
 "Região Metropolitana Vale do Aço",402.0,202.0,nil,nil,140.0,60.0,nil,nil,nil,nil,2000
 "Colar Metropolitano da Região Metropolitana Vale do Aço",59.7,43.5,nil,14.8,nil,0.4,1.0,nil,nil,nil,2000
 "Espírito Santo",2923.6,914.1,nil,526.4,1330.6,14.0,22.8,75.9,39.8,nil,2000
-"Vitória",318.0,nil,nil,3.0,295.0,nil,20.0,nil,nil,nil,2000
 "Região Metropolitana Grande Vitória",1465.8,135.0,nil,273.0,1000.5,nil,20.0,nil,37.3,nil,2000
 "Rio de Janeiro",17447.2,4825.0,20.0,4578.3,7328.1,380.6,271.8,23.4,20.0,nil,2000
-"Rio de Janeiro",8343.0,nil,nil,1951.0,6124.0,268.0,nil,nil,nil,nil,2000
 "Região Metropolitana do Rio de Janeiro",13429.4,3313.0,20.0,3020.4,6805.0,268.0,nil,3.0,nil,nil,2000
 "São Paulo",105582.0,3238.2,47.0,56565.1,38586.8,4734.8,684.0,783.9,345.0,597.2,2000
-"São Paulo",20150.2,nil,nil,nil,15426.5,4290.0,331.0,102.7,nil,nil,2000
 "Região Metropolitana de São Paulo",83066.9,491.0,nil,51669.9,25111.7,4290.0,346.1,635.9,1.0,521.3,2000
 "Região Metropolitana Baixada Santista",1659.1,150.0,nil,995.8,511.5,nil,0.5,1.3,nil,nil,2000
 "Região Metropolitana de Campinas",3508.2,63.0,10.0,920.2,2485.1,nil,21.8,2.1,nil,6.0,2000
 "Sul",19874.8,5112.3,36.7,4833.9,8046.0,347.2,832.6,30.1,119.9,516.1,2000
 "Paraná",7542.9,2901.9,9.0,1657.9,2726.6,101.6,105.4,6.6,32.9,1.0,2000
-"Curitiba",1548.9,nil,nil,nil,1547.5,nil,nil,1.4,nil,nil,2000
 "Região Metropolitana de Curitiba",2131.8,114.0,nil,7.5,1982.4,25.0,1.5,1.4,nil,nil,2000
 "Região Metropolitana de Londrina",838.9,410.8,nil,415.1,nil,nil,13.0,nil,nil,nil,2000
 "Região Metropolitana de Maringá",460.9,443.7,7.0,1.2,9.0,nil,nil,nil,nil,nil,2000
 "Santa Catarina",4863.6,1063.5,7.7,1127.4,2455.2,118.7,30.0,7.6,53.5,nil,2000
-"Florianópolis",435.0,nil,nil,nil,435.0,nil,nil,nil,nil,nil,2000
 "Núcleo Metropolitano da Região Metropolitana de Florianópolis",710.7,nil,nil,42.5,668.2,nil,nil,nil,nil,nil,2000
 "Área de Expansão Metropolitana da Região Metropolitana de Florianópolis",78.8,43.6,nil,14.1,20.0,nil,1.0,0.1,nil,nil,2000
 "Núcleo Metropolitano da Região Metropolitana do Vale do Itajaí",601.2,nil,nil,497.3,95.0,nil,8.9,nil,nil,nil,2000
@@ -74,16 +52,11 @@
 "Núcleo Metropolitano da Região Metropolitana Norte/Nordeste Catarinense",514.3,16.1,nil,nil,498.2,nil,nil,nil,nil,nil,2000
 "Área de Expansão Metropolitana da Região Metropolitana Norte/Nordeste Catarinense",345.4,86.8,nil,176.9,80.0,nil,1.5,0.2,nil,nil,2000
 "Rio Grande do Sul",7468.3,1146.9,20.0,2048.6,2864.2,126.9,697.2,15.9,33.5,515.1,2000
-"Porto Alegre",1610.0,nil,nil,nil,1050.0,nil,60.0,nil,nil,500.0,2000
 "Região Metropolitana de Porto Alegre",3566.2,75.5,nil,753.5,1963.4,8.7,250.1,10.0,nil,505.0,2000
-"CentronilOeste",14296.5,3131.0,8.0,4684.4,5553.1,685.6,77.0,26.0,104.9,26.5,2000
+"Centro-Oeste",14296.5,3131.0,8.0,4684.4,5553.1,685.6,77.0,26.0,104.9,26.5,2000
 "Mato Grosso do Sul",1756.5,727.7,8.0,785.6,194.2,nil,25.5,nil,nil,15.5,2000
-"Campo Grande",496.4,46.4,nil,450.0,nil,nil,nil,nil,nil,nil,2000
 "Mato Grosso",2163.7,877.1,nil,491.9,599.3,164.0,24.0,0.1,6.3,1.0,2000
-"Cuiabá",630.0,nil,nil,nil,442.0,164.0,24.0,nil,nil,nil,2000
 "Goiás",7809.1,1526.2,nil,1385.0,4759.6,nil,27.5,2.2,98.6,10.0,2000
-"Goiânia",3270.0,nil,nil,nil,3270.0,nil,nil,nil,nil,nil,2000
 "Região Metropolitana de Goiânia",3709.7,63.7,nil,124.0,3522.0,nil,nil,nil,nil,nil,2000
 "Distrito Federal",2567.2,nil,nil,2021.9,nil,521.6,nil,23.7,nil,nil,2000
-"Brasília",2567.2,nil,nil,2021.9,nil,521.6,nil,23.7,nil,nil,2000
 "Região Integrada de Desenvolvimento do Distrito Federal e Entorno",3046.8,113.8,nil,2159.0,228.7,521.6,nil,23.7,nil,nil1.5,0.2,nil,nil,2000
