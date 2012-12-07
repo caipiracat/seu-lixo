@@ -1,3 +1,80 @@
+<!-- IDENTAR TODA ESSA MERDA DE NOVO -->
+<!-- Le styles -->
+<script type='text/javascript'>
+
+  // ranking
+  var cities = <%= raw @data.to_json %>;
+
+  var city_values = new Array();
+
+  $(function() {
+
+    $(cities).each(function(index) {
+      city_values.push([ this.name, { v:this.garbage, f:this.garbage.toString() }, { v:this.garbage_per_capita, f:this.garbage_per_capita.toString() } ]);
+    });
+  });
+
+  //Script de tabela do google =D
+    google.load('visualization', '1', {packages:['table']});
+    google.setOnLoadCallback(drawTable);
+    function drawTable() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Cidade');
+      data.addColumn('number', 'Lixo coletado');
+      data.addColumn('number', 'Kg de lixo por habitante');
+      data.addRows(city_values);
+
+      var table = new google.visualization.Table(document.getElementById('table_div'));
+      table.draw(data, {showRowNumber: true});
+    }
+
+    // grafico de barras
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Cidade', 'Quantidade'],
+        ['São Paulo',  20150],
+        ['Rio de Janeiro',  8343],
+        ['Belo Horizonte',  4920.6],
+        ['Goiania',  3270],
+        ['Brasilia',  2567.2],
+
+      ]);
+
+      var options = {
+        title: 'Quantidade de lixo coletado por cidade (toneladas)',
+        hAxis: {title: 'Cidade', titleTextStyle: {color: 'red'}}
+      };
+
+      var chart = new google.visualization.ColumnChart(document.getElementById('div_barras'));
+      chart.draw(data, options);
+    }
+
+    // dados brasil
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChartP);
+    function drawChartP() {
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['lixão',     48321],
+        ['Aterro controlado',  84575],
+        ['Aterro sanitário', 82640],
+        ['Estação de compostagem',    6549],
+        ['Outras',    7135]
+      ]);
+
+      var options = {
+        //title: 'Destino do lixo no Brasil'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('pie'));
+      chart.draw(data, options);
+
+    }
+
+</script>
+
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
 
 <h2><%= t 'info.your_city' %></h2>

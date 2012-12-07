@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  layout :false
+  #layout :false
 
   def index
     @data = Locale.includes(:idhs, :garbages).order('garbages.total desc').limit(10).collect do |locale|

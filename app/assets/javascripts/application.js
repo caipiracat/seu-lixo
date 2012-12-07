@@ -26,3 +26,11 @@
 //= require bootstrap-carousel
 //= require bootstrap-typeahead
 //= require contador
+//= require jsapi
+
+var cont = 0;
+function contador() {
+  document.getElementById('tempo').innerHTML=cont;
+  cont = cont + 25;
+  setTimeout("contador()", 1000);
+}

@@ -59,19 +59,43 @@
      <b>TONELADAS</b> de lixo!</p></h2></center>
      <br />
       <h3><p>E de quem é a culpa?</h3></p>
-      
+
 
   <%= yield %>
-  
-  <footer>
-    <table>
-      <td>Caipira Cat</td>
-      <td>Contato</td>
-      <td>Bugs</td>
-      <td>GitHub</td>
-      <td>Facebook</td>    
-     </table>
-   </footer>
+
+  <style>
+        #footer{
+          border-radius: 1em;
+          text-align: center;
+          background-color: #000000;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          padding-left:0px ;
+        }
+        #quem{
+          text-align: left;
+          margin: auto;
+        }
+
+      </style>
+      <footer id="footer" class="row">
+       <div class="span2" id="quem2" >
+        <h5>Quem somos?</h5>
+        <table id="quem">
+          <tr>
+            <td><a href="https://github.com/rodrigomello/seu-lixo">CaipiraCat</a></td>
+          </tr><tr>
+            <td><a href="http://gurusorocaba.com.br/">GURU</a></td>
+          </tr>
+        </table>
+       </div>
+       <div class="span2">Contato</div>
+       <div class="span2">Bugs</div>
+       <div class="span2"><a href="https://github.com/rodrigomello/seu-lixo"><img src="gt.png"/></a></div>
+       <div class="span2"><a href="https://fb.com/SLixo"><img src="facebook.png"/></a></div>
+       <div class="span2"><a href="https://twitter.com/SLixo"><img src="tw.png"/></a></div>
+       </footer>
+
   </div>
 
   <script>
