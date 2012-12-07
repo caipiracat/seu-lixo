@@ -12,7 +12,7 @@ class ImportIdhData
       @localidade.name = row[:name]
       @localidade.state = row[:state]
 
-      id = Locale.where(:name => @localidade.name, :state => @localidade.state).first.id
+      id = Locale.where(:name => @localidade.name, :state => @localidade.state).first.try(:id)
 
       if id.nil?
         @localidade.save
@@ -23,7 +23,9 @@ class ImportIdhData
       row.delete(:state)
 
       row[:locale_id] = id
-      Idh.create!(row.to_hash.symbolize_keys)
+      if id
+        Idh.create!(row.to_hash.symbolize_keys)
+      end
     end
   end
 end
