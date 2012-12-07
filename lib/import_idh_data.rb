@@ -7,12 +7,12 @@ class ImportIdhData
 
     csv.each do |row|
       row = row.to_hash.with_indifferent_access
+
       localidade = Locale.new
       localidade.name = row[:name]
+      localidade.state = row[:state]
 
-      lnome = localidade.name
-
-      id = Locale.get_local_id(lnome)
+      id = Locale.where(:name => @localidade.name, :state => @localidade.state).first.id
 
       if id == 0
         localidade.save
@@ -20,8 +20,9 @@ class ImportIdhData
       end
 
       row.delete(:name)
+      row.delete(:state)
 
-      row[:owner] = id
+      row[:locale_id] = id
       Idh.create!(row.to_hash.symbolize_keys)
     end
   end
