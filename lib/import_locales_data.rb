@@ -10,6 +10,7 @@ class ImportLocalesData
       row = row.to_hash.with_indifferent_access
       locale = Locale.new
       locale.name = row[:name]
+      locale.state = row[:state]
       locale.population = row[:population]
       locale.save
     end
