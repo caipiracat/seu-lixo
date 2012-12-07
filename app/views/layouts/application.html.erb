@@ -6,8 +6,25 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript">
+    //<![CDATA[
+      var n = 000000;
+      var myOdometer;
+      function run () {
+        var div = document.getElementById("odometerDiv");
+        myOdometer = new Odometer(div, {value: n, digits: 6, tenths: true});
+        update();
+      }
+
+      function update () {
+        n=n+0.0025
+        myOdometer.set(n);
+        setTimeout("update()", 0);
+      }
+    //]]>
+  </script>
 </head>
-<body>
+<body onload="run()">
 
  <!-- menu -->
 <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
@@ -52,13 +69,30 @@
 
 
     <div class="container marketing" style = "margin-top: 100px">
-    <center><h2><p>    Desde que você entrou nesse site, o Brasil coletou
-      <br />
-      <b><span id="tempo">-</span></b>
-      <br />
-     <b>TONELADAS</b> de lixo!</p></h2></center>
-     <br />
-      <h3><p>E de quem é a culpa?</h3></p>
+
+  <div style="color:#000" align="center">
+  Desde que você entrou nesse site, o Brasil coletou
+
+    <div id="odometerDiv" style="width:30%; padding:auto auto;" ></div>
+
+    <br \>
+  <br \>
+  <br \>
+  <br \>
+  <br \>
+
+    <!-- <div style="color:#000" align="center"> -->
+  <b>TONELADAS</b> de lixo!
+  <!-- </div> -->
+
+  <br \>
+  <br \>
+  <br \>
+
+  </div>
+
+
+
 
 
   <%= yield %>
