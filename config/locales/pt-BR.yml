@@ -1,0 +1,15 @@
+pt-BR:
+  models:
+    garbage: lixo
+  attributes:
+    composting: compostagem
+    incineration: incineração
+    landfill: aterro controlado
+    not_fixed: não fixo
+    open_air: céu aberto
+    others: outros
+    sanitary_landfill: aterro sanitario
+    screening: triagem
+    total: total
+    wetlands: áreas alagadas
+    year: ano
