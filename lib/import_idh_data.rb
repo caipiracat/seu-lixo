@@ -8,15 +8,15 @@ class ImportIdhData
     csv.each do |row|
       row = row.to_hash.with_indifferent_access
 
-      localidade = Locale.new
-      localidade.name = row[:name]
-      localidade.state = row[:state]
+      @localidade = Locale.new
+      @localidade.name = row[:name]
+      @localidade.state = row[:state]
 
       id = Locale.where(:name => @localidade.name, :state => @localidade.state).first.id
 
-      if id == 0
-        localidade.save
-        id = localidade.id
+      if id.nil?
+        @localidade.save
+        id = @localidade.id
       end
 
       row.delete(:name)

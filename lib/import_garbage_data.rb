@@ -12,9 +12,9 @@ class ImportGarbageData
       @localidade.name = row[:name]
       @localidade.state = row[:state]
 
-      id = Locale.where(:name => @localidade.name, :state => @localidade.state).first.id
+      id = Locale.where(:name => @localidade.name, :state => @localidade.state).first.try(:id)
 
-      if id == 0
+      if id.nil?
         @localidade.save
         id = @localidade.id
       end
@@ -23,7 +23,9 @@ class ImportGarbageData
       row.delete(:state)
 
       row[:locale_id] = id
-      Garbage.create!(row.to_hash.symbolize_keys)
+      if id
+        Garbage.create!(row.to_hash.symbolize_keys)
+      end
     end
   end
 end

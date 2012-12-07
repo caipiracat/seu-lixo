@@ -1,4 +1,4 @@
-"name","state","total","open_air","wetlands","landfill","sanitary_landfill","composting","screening","incineration","not_fixed","others"
+"name","state","total","open_air","wetlands","landfill","sanitary_landfill","composting","screening","incineration","not_fixed","others","year"
 "Porto Velho","RO",193.4,193.4,nil,nil,nil,nil,nil,nil,nil,nil,2000
 "Rio Branco","AC",236.2,nil,nil,nil,236.2,nil,nil,nil,nil,nil,2000
 "Manaus","AM",2400.0,nil,nil,2400.0,nil,nil,nil,nil,nil,nil,2000
