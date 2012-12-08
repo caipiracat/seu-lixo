@@ -31,6 +31,7 @@ end
 gem 'jquery-rails'
 gem 'unicorn'
 
+gem 'rvm-capistrano'
 gem 'capistrano'
 
 gem 'friendly_id', '~> 4.0.0'
