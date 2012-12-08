@@ -46,3 +46,35 @@
 <p style="font-size: 24px; text-align: center; margin-bottom: 20px">Essa cidade não possui dados sobre lixo :(</p>
 
 <% end %>
+
+<% if @locale.idhs.first %>
+
+<script type='text/javascript'>
+  // grafico de barras
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Dado', 'Valor'],
+      ['IDH-M', <%= @locale.idhs.first.try(:idhm) %>],
+      ['Renda',  <%= @locale.idhs.first.try(:income) %>],
+      ['Longevidade', <%= @locale.idhs.first.try(:longevity) %>],
+      ['Educação', <%= @locale.idhs.first.try(:education) %>]
+    ]);
+
+    var options = {
+      title: 'Dados da cidade',
+      hAxis: {title: '', titleTextStyle: {color: 'red'}}
+    };
+
+    var chart = new google.visualization.ColumnChart(document.getElementById('div_barras'));
+    chart.draw(data, options);
+  }
+</script>
+
+<div id="div_barras">
+</div>
+
+<% else %>
+  <p style="font-size: 24px; text-align: center; margin-bottom: 20px">Essa cidade não possui dados sobre IDH :(</p>
+<% end %>
