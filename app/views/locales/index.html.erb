@@ -1,3 +1,12 @@
+<div style="margin: auto; text-align: center; margin-bottom: 60px">
+  <h2><%= t 'info.your_city' %></h2>
+  <%= form_tag '/cidades/1', { class: 'form-search', method: :get } do %>
+    <%= text_field_tag :locale, nil, id: 'locales', class: 'input-xxlarge search-query', data: { source: @locales.collect { |locale| "#{ locale.name }, #{ locale.state }" } } %>
+    <%= submit_tag( t('search'), class: 'btn btn-success' ) %>
+  <% end %>
+</div>
+
+
 <!-- IDENTAR TODA ESSA MERDA DE NOVO -->
 <!-- Le styles -->
 <script type='text/javascript'>
@@ -8,9 +17,8 @@
   var city_values = new Array();
 
   $(function() {
-
     $(cities).each(function(index) {
-      city_values.push([ this.name, { v:this.garbage, f:this.garbage.toString() }, { v:this.garbage_per_capita, f:this.garbage_per_capita.toString()},{v:this.idh, f:this.idh.toString()} ]);
+      city_values.push([ this.name, { v:this.garbage, f:this.garbage.toString() }, { v:this.garbage_per_capita, f:this.garbage_per_capita.toString()} ]);
     });
   });
 
@@ -22,7 +30,7 @@
       data.addColumn('string', 'Cidade');
       data.addColumn('number', 'Lixo coletado');
       data.addColumn('number', 'Kg de lixo por habitante');
-      data.addColumn('number','IDH');
+      // data.addColumn('number','IDH');
       data.addRows(city_values);
 
       var table = new google.visualization.Table(document.getElementById('table_div'));
@@ -78,13 +86,14 @@
 
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
 
-
-
-<div style="margin: auto; text-align: center">
-  <h2><%= t 'info.your_city' %></h2>
-  <%= form_tag '/cidades/1', { class: 'form-search', method: :get } do %>
-    <%= text_field_tag :locale, nil, id: 'locales', class: 'input-xxlarge search-query', data: { source: @locales.collect { |locale| "#{ locale.name }, #{ locale.state }" } } %>
-    <%= submit_tag( t('search'), class: 'btn btn-success' ) %>
-  <% end %>
+<div id="table_div" style="margin-bottom: 60px">
 </div>
+
+<div id="div_barras" style="margin-bottom: 60px">
+</div>
+
+<div id="pie">
+</div>
+
+
 
