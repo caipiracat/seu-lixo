@@ -43,9 +43,17 @@
 </div>
 <% else %>
 
-<p style="font-size: 24px; text-align: center; margin-bottom: 20px">Essa cidade não possui dados sobre lixo :(</p>
-
-<div class="span4" style=" width: 30%; margin: 10px 10px; background: #ccc; border-radius: 1em; position:relative; padding-bottom:10px;">
+<div class="row">
+        <div class="span4">
+         <!-- <img class="img-circle" src="./files/140x140">-->
+          <!-- <h2>Classificação</h2> -->
+          <div id='table_div'></div>
+        </div><!-- /.span4 -->
+        <div class="span12" style="margin-bottom: 50px;">
+          <div style="width: 65%; float: center; position:relative;margin: 0 auto;">
+            <p style="font-size: 24px; text-align: center; margin-bottom: 20px">Essa cidade não possui dados sobre lixo :(</p>
+          </div>
+        <div class="span4" style=" width: 30%; float: center; margin: 0 auto;background: #ccc; border-radius: 1em; position:relative; padding-bottom:10px;">
     <h2>... e como você pode nos ajudar?</h2>
     <a href="cidades" class="btn" id="btn1" style="background: #E2F21F; border-radius: 1em;">Cobre o poder público</a><br /> <!-- Link para guia -->
     <a href="ajude-com-dados" class="btn" id="btn2"style="background: #E2F21F; border-radius: 1em;">Ajude-nos com dados</a> <!-- Link para form -->
@@ -54,6 +62,9 @@
           <!-- <h2>Destino do lixo no Brasil</h2> -->
 
         </div><!-- /.span4 -->
+          <!-- <h2>Lixo coletado</h2><div id="div_barras"></div> -->
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
 
 <% end %>
 
@@ -82,9 +93,8 @@
   }
 </script>
 
-<div id="div_barras" style="position: relative;">
+<div id="div_barras" style="postion: relative; heigth: 300px;">
 </div>
-
 <% else %>
   <p style="font-size: 24px; text-align: center; margin-bottom: 20px">Essa cidade não possui dados sobre IDH :(</p>
 <% end %>
