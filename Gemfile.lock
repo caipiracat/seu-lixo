@@ -62,6 +62,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.4.0)
+    mysql2 (0.3.11)
     pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -133,6 +134,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.1.0)
   friendly_id (~> 4.0.0)
   jquery-rails
+  mysql2
   pg
   rails (~> 3.2.3)
   rspec-rails (~> 2.12.0)
