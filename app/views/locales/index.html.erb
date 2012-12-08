@@ -10,7 +10,7 @@
   $(function() {
 
     $(cities).each(function(index) {
-      city_values.push([ this.name, { v:this.garbage, f:this.garbage.toString() }, { v:this.garbage_per_capita, f:this.garbage_per_capita.toString() } ]);
+      city_values.push([ this.name, { v:this.garbage, f:this.garbage.toString() }, { v:this.garbage_per_capita, f:this.garbage_per_capita.toString()},{v:this.idh, f:this.idh.toString()} ]);
     });
   });
 
@@ -22,6 +22,7 @@
       data.addColumn('string', 'Cidade');
       data.addColumn('number', 'Lixo coletado');
       data.addColumn('number', 'Kg de lixo por habitante');
+      data.addColumn('number','IDH');
       data.addRows(city_values);
 
       var table = new google.visualization.Table(document.getElementById('table_div'));
@@ -57,7 +58,7 @@
     function drawChartP() {
       var data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
-        ['lixão',     48321],
+        ['lixão',    48321],
         ['Aterro controlado',  84575],
         ['Aterro sanitário', 82640],
         ['Estação de compostagem',    6549],
@@ -86,3 +87,4 @@
     <%= submit_tag( t('search'), class: 'btn btn-success' ) %>
   <% end %>
 </div>
+
