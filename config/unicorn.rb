@@ -4,9 +4,9 @@ listen 5002
 worker_processes 4
 timeout 300
 
-APP_PATH = '/home/ubuntu/rails_apps/lumini.com.br/current'
+APP_PATH = '/home/ubuntu/rails_apps/seulixo.com/current'
 base_dir = APP_PATH
-shared_path = '/home/ubuntu/rails_apps/lumini.com.br/shared'
+shared_path = '/home/ubuntu/rails_apps/seulixo.com/shared'
 working_directory base_dir
 
 stderr_path APP_PATH + "/log/unicorn.stderr.log"
