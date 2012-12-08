@@ -1,10 +1,48 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
+<h1 style="text-align: center; margin-bottom: 20px">
   <%= @locale.name %>
-</p>
+</h1>
+
+<% if @locale.garbages.first %>
+
+<!-- IDENTAR TODA ESSA MERDA DE NOVO -->
+<!-- Le styles -->
+<script type='text/javascript'>
+  var raw_data = [['Task', 'Hours per Day']];
+  var data = <%= raw @data.to_json %>;
+  
+  $(function() {
+    $(data).each(function(index) {
+      raw_data.push([{ name: this.name, value: this.value }]);
+    });
+  });
+
+  // dados brasil
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChartP);
+  function drawChartP() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Lixão', <%= ((@locale.garbages.first.open_air.to_f * 100) / @locale.garbages.first.total.to_f).round(0) %>],
+      ['Aterro controlado', <%= ((@locale.garbages.first.landfill.to_f * 100) / @locale.garbages.first.total.to_f).round(0) %>],
+      ['Aterro sanitário', <%= ((@locale.garbages.first.sanitary_landfill.to_f * 100) / @locale.garbages.first.total.to_f).round(0) %>],
+      ['Estação de compostagem', <%= ((@locale.garbages.first.composting.to_f * 100) / @locale.garbages.first.total.to_f).round(0) %>],
+      ['Outras', <%= ((@locale.garbages.first.others.to_f * 100) / @locale.garbages.first.total.to_f).round(0) %>]
+    ]);
+
+    var options = {
+      //title: 'Destino do lixo no Brasil'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('pie'));
+    chart.draw(data, options);
+  }
+</script>
 
 
-<%= link_to 'Edit', edit_locale_path(@locale) %> |
-<%= link_to 'Back', locales_path %>
+<div id="pie">
+</div>
+<% else %>
+
+<p style="font-size: 24px; text-align: center; margin-bottom: 20px">Essa cidade não possui dados sobre lixo :(</p>
+
+<% end %>
