@@ -9,7 +9,7 @@
 <script type='text/javascript'>
   var raw_data = [['Task', 'Hours per Day']];
   var data = <%= raw @data.to_json %>;
-  
+
   $(function() {
     $(data).each(function(index) {
       raw_data.push([{ name: this.name, value: this.value }]);
@@ -57,9 +57,9 @@
     var data = google.visualization.arrayToDataTable([
       ['Dado', 'Valor'],
       ['IDH-M', <%= @locale.idhs.first.try(:idhm) %>],
-      ['Renda',  <%= @locale.idhs.first.try(:income) %>],
-      ['Longevidade', <%= @locale.idhs.first.try(:longevity) %>],
-      ['Educação', <%= @locale.idhs.first.try(:education) %>]
+      ['IDH Renda',  <%= @locale.idhs.first.try(:income) %>],
+      ['IDH Longevidade', <%= @locale.idhs.first.try(:longevity) %>],
+      ['IDH Educação', <%= @locale.idhs.first.try(:education) %>]
     ]);
 
     var options = {
