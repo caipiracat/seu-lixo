@@ -25,7 +25,6 @@
 //= require bootstrap-collapse
 //= require bootstrap-carousel
 //= require bootstrap-typeahead
-//= require contador
 //= require jsapi
 
 function Odometer (parentDiv,opts) {
@@ -34,9 +33,9 @@ function Odometer (parentDiv,opts) {
     this.digits       = 6;
     this.tenths       = 0;
     this.digitHeight  = 80;
-    this.digitPadding = 0;
-    this.digitWidth   = 60;
-    this.bustedness   = 2;
+    this.digitPadding = 2;
+    this.digitWidth   = 45;
+    this.bustedness   = 0;
     this.fontStyle    = "font-family: Courier New, Courier, monospace; font-weight: 900;";
     this.value        = -1;
 
