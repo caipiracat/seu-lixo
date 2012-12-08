@@ -45,6 +45,16 @@
 
 <p style="font-size: 24px; text-align: center; margin-bottom: 20px">Essa cidade não possui dados sobre lixo :(</p>
 
+<div class="span4" style=" width: 30%; margin: 10px 10px; background: #ccc; border-radius: 1em; position:relative; padding-bottom:10px;">
+    <h2>... e como você pode nos ajudar?</h2>
+    <a href="cidades" class="btn" id="btn1" style="background: #E2F21F; border-radius: 1em;">Cobre o poder público</a><br /> <!-- Link para guia -->
+    <a href="ajude-com-dados" class="btn" id="btn2"style="background: #E2F21F; border-radius: 1em;">Ajude-nos com dados</a> <!-- Link para form -->
+    <p style="text-align: justify; margin-top: 5px;">Usamos dados apenas de <b>2000</b> porque não temos dados mais recentes e, ainda assim, os dados de <b>2000</b> são apenas das capitais.</p>
+          <!--<img class="img-circle" src="./files/140x140">-->
+          <!-- <h2>Destino do lixo no Brasil</h2> -->
+
+        </div><!-- /.span4 -->
+
 <% end %>
 
 <% if @locale.idhs.first %>
@@ -72,7 +82,7 @@
   }
 </script>
 
-<div id="div_barras">
+<div id="div_barras" style="position: relative;">
 </div>
 
 <% else %>
