@@ -31,6 +31,8 @@ end
 gem 'jquery-rails'
 gem 'unicorn'
 
+gem 'capistrano'
+
 gem 'friendly_id', '~> 4.0.0'
 gem 'simple_form', '~> 2.0.0'
 
