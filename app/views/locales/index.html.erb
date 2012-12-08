@@ -77,9 +77,12 @@
 
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
 
-<h2><%= t 'info.your_city' %></h2>
 
-<%= form_tag '/cidades/1', { class: 'form-search', method: :get } do %>
-  <%= text_field_tag :locale, nil, id: 'locales', class: 'input-xxlarge search-query', data: { source: @locales.collect { |locale| "#{ locale.name }, #{ locale.state }" } } %>
-  <%= submit_tag( t('search'), class: 'btn' ) %>
-<% end %>
+
+<div style="margin: auto; text-align: center">
+  <h2><%= t 'info.your_city' %></h2>
+  <%= form_tag '/cidades/1', { class: 'form-search', method: :get } do %>
+    <%= text_field_tag :locale, nil, id: 'locales', class: 'input-xxlarge search-query', data: { source: @locales.collect { |locale| "#{ locale.name }, #{ locale.state }" } } %>
+    <%= submit_tag( t('search'), class: 'btn btn-success' ) %>
+  <% end %>
+</div>
