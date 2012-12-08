@@ -6,6 +6,9 @@ Seulixo::Application.routes.draw do
 
   root to: 'home#index'
 
+  get 'sobre', to: 'home#about', as: 'about'
+  get 'ajude-com-dados', to: 'home#data', as: 'data'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
