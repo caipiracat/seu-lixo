@@ -14,3 +14,17 @@ Mesmo com a pequena quantidade de dados sobre lixo, podemos inferir informaçõe
 
 ###Sobre dados abertos: 
 Segundo a definição da Open Knowledge Foundation, em suma, dados são abertos quando qualquer pessoa pode livremente usá-los, reutilizá-los e redistribuí-los, estando sujeito a, no máximo, a exigência de creditar a sua autoria e compartilhar pela mesma licença.
+
+***
+
+##Para rodar localmente
+
+    git clone git://github.com/CodingForChange/seu-lixo.git
+    cd seu-lixo
+    bundle install --without production
+    rake db:migrate
+    rails s
+
+##Para contribuir com o código
+Faça um fork do projeto, altere e envie um pull request o/
+Toda e qualquer contribuição é bem vinda! :)
