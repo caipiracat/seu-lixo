@@ -19,6 +19,8 @@ Segundo a definição da Open Knowledge Foundation, em suma, dados são abertos 
 
 ##Para rodar localmente
 
+Crie um arquivo database.yml dentro da pasta config/ e depois:
+
     git clone git://github.com/CodingForChange/seu-lixo.git
     cd seu-lixo
     bundle install --without production
@@ -27,4 +29,4 @@ Segundo a definição da Open Knowledge Foundation, em suma, dados são abertos 
 
 ##Para contribuir com o código
 Faça um fork do projeto, altere e envie um pull request o/
-Toda e qualquer contribuição é bem vinda! :)
+Toda e qualquer contribuição é bem vinda! :)    
