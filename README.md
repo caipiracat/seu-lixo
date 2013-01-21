@@ -1,4 +1,5 @@
 #Sobre Seu Lixo
+**http://www.seulixo.com**  
 Site criado durante o Desarrollando América Latina 2012 com a intenção de agregar os dados abertos sobre lixo, possibilitando inferir informações importantes sobre um dos princípais problemas mundiais: o lixo. 
 
 Os destinos do lixo de cada cidade revelam as diretrizes de planejamento urbano adotado por cada município e  como a comunidade está consciente ou não para alternativas ecologicamente mais corretas.
