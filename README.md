@@ -19,7 +19,7 @@ Segundo a definição da Open Knowledge Foundation, em suma, dados são abertos 
 
 ##Para rodar localmente
 
-Crie um arquivo database.yml dentro da pasta config/ e depois:
+Crie um arquivo database.yml (exemplo em: **https://gist.github.com/4588705**) dentro da pasta config/ e depois:
 
     git clone git://github.com/CodingForChange/seu-lixo.git
     cd seu-lixo
