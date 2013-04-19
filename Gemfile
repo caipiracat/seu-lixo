@@ -32,6 +32,6 @@ gem 'capistrano',     '~> 2.14.0'
 gem 'unicorn', '~> 4.6.0'
 
 group :development, :test do
-  gem 'factory_girl_rails', '~> 4.1.0'
+  gem 'factory_girl_rails', '~> 4.2.0'
   gem 'rspec-rails',        '~> 2.13.0'
 end
