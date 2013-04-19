@@ -33,5 +33,5 @@ gem 'unicorn', '~> 4.5.0'
 
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.1.0'
-  gem 'rspec-rails',        '~> 2.12.0'
+  gem 'rspec-rails',        '~> 2.13.0'
 end
