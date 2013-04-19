@@ -22,7 +22,7 @@ end
 gem 'jquery-rails', '~> 2.1.0'
 
 gem 'friendly_id', '~> 4.0.0'
-gem 'simple_form', '~> 2.0.0'
+gem 'simple_form', '~> 2.1.0'
 
 # Capistrano
 gem 'rvm-capistrano', '~> 1.2.0'
