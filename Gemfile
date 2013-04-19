@@ -28,6 +28,9 @@ gem 'simple_form', '~> 2.1.0'
 gem 'rvm-capistrano', '~> 1.2.0'
 gem 'capistrano',     '~> 2.14.0'
 
+# New Relic
+gem 'newrelic_rpm', '~> 3.5.0'
+
 # Unicorn
 gem 'unicorn', '~> 4.6.0'
 
