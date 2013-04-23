@@ -27,9 +27,6 @@ gem 'simple_form', '~> 2.1.0'
 # New Relic
 gem 'newrelic_rpm', '~> 3.5.0'
 
-# Unicorn
-gem 'unicorn', '~> 4.6.0'
-
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.2.0'
   gem 'rspec-rails',        '~> 2.13.0'
