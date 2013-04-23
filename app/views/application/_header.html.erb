@@ -1,0 +1,24 @@
+<div class="container navbar-wrapper" style="color:#000; margin: 0 auto">
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <%= link_to root_path, class: 'brand' do %>
+        <img src="/seulixologo.png"/>
+      <% end %>
+
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li <%= "class=active" if current_page?(root_path) %>><%= link_to 'Home', root_path %></li>
+          <li <%= "class=active" if current_page?(locales_path) or @locale.nil? == false %>><%= link_to 'Cidades', locales_path %></li>
+          <li <%= "class=active" if current_page?(data_path) %>><%= link_to 'Ajuda com dados', data_path %></li>
+          <li <%= "class=active" if current_page?(about_path) %>><%= link_to 'Sobre', about_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
