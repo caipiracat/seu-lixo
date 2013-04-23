@@ -146,3 +146,17 @@ function Odometer (parentDiv,opts) {
     if (this.value >= 0) this.set(this.value);
 }
 
+
+var n = 000000;
+var myOdometer;
+function run () {
+  var div = document.getElementById("odometerDiv");
+  myOdometer = new Odometer(div, {value: n, digits: 6, tenths: true});
+  update();
+}
+
+function update () {
+  n=n+0.0025
+  myOdometer.set(n);
+  setTimeout("update()", 0);
+}

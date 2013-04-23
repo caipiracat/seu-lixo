@@ -6,23 +6,6 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <script type="text/javascript">
-    //<![CDATA[
-      var n = 000000;
-      var myOdometer;
-      function run () {
-        var div = document.getElementById("odometerDiv");
-        myOdometer = new Odometer(div, {value: n, digits: 6, tenths: true});
-        update();
-      }
-
-      function update () {
-        n=n+0.0025
-        myOdometer.set(n);
-        setTimeout("update()", 0);
-      }
-    //]]>
-  </script>
 </head>
 <body onload="run()">
 <div class="container navbar-wrapper" style="color:#000; margin: 0 auto">
