@@ -1,13 +1,3 @@
-#
-# This file configures the New Relic Agent.  New Relic monitors
-# Ruby, Java, .NET, PHP, and Python applications with deep visibility and low overhead.
-# For more information, visit www.newrelic.com.
-#
-# Generated April 19, 2013
-#
-# This configuration file is custom generated for caipira cat
-
-
 # Here are the settings that are common to all environments
 common: &default_settings
   # ============================== LICENSE KEY ===============================
@@ -15,7 +5,7 @@ common: &default_settings
   # You must specify the license key associated with your New Relic
   # account.  This key binds your Agent's data to your account in the
   # New Relic service.
-  license_key: '2a5ca33174ccf8655fdb17bd2dc70900c909e8d8'
+  license_key: '<%= ENV["NEW_RELIC_LICENSE_KEY"] %>'
 
   # Agent Enabled (Ruby/Rails Only)
   # Use this setting to force the agent to run or not run.
@@ -42,7 +32,7 @@ common: &default_settings
   #       - Ajax Service
   #       - All Services
   #
-  app_name: seu lixo
+  app_name: <%= ENV["NEW_RELIC_APP_NAME"] %>
 
   # When "true", the agent collects performance data about your
   # application and reports this data to the New Relic service at
@@ -224,4 +214,4 @@ production:
 staging:
   <<: *default_settings
   monitor_mode: true
-  # app_name: My Application (Staging)
+  app_name: <%= ENV["NEW_RELIC_APP_NAME"] %> (Staging)
