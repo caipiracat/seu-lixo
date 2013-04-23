@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Seu Lixo</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -28,5 +27,7 @@
 
       <%= render 'footer' %>
     </div>
+
+    <%= javascript_include_tag 'application', async: true %>
   </body>
 </html>
