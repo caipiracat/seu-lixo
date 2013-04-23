@@ -24,10 +24,6 @@ gem 'jquery-rails', '~> 2.1.0'
 gem 'friendly_id', '~> 4.0.0'
 gem 'simple_form', '~> 2.1.0'
 
-# Capistrano
-gem 'rvm-capistrano', '~> 1.2.0'
-gem 'capistrano',     '~> 2.14.0'
-
 # New Relic
 gem 'newrelic_rpm', '~> 3.5.0'
 
