@@ -234,3 +234,48 @@
   #odometer {
     line-height: 62px;
   }
+
+  #footer{
+    border-radius: 1em;
+    text-align: center;
+    background-color: #000000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left:0px ;
+    color:#FFF;
+  }
+  #quem{
+    text-align: left;
+    padding-top: 0;
+    margin: auto;
+
+  }
+  #contato{
+    padding-top: 0px;
+  }
+  #bugs{
+    padding-top: 0px;
+  }
+  #twitter {
+
+    padding-right: 0px;
+  }
+  #git{
+    margin: auto;
+  }
+  #facebook{
+    margin:auto;
+  }
+  .subitem{
+    text-align: left;
+    padding-top: 0;
+    margin: auto;
+  }
+
+  .nav{
+    padding-top: 15px;
+
+  }
+  .nav li {
+    border-radius: 1em;
+  }
