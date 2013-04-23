@@ -1,46 +1,32 @@
 <!DOCTYPE html>
-<!-- saved from url=(0058)http://twitter.github.com/bootstrap/examples/carousel.html -->
 <html lang="pt-BR">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Seulixo</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body onload="run()">
-  <%= render 'header' %>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Seu Lixo</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
 
+  <body onload="run()">
+    <%= render 'header' %>
 
-    <div class="container marketing" style = "margin-top: 10px">
+    <div class="container marketing" style="margin-top: 10px">
+      <div style="color:#000" align="center">
+        Desde que você entrou nesse site, o Brasil coletou
 
-  <div style="color:#000" align="center">
-  Desde que você entrou nesse site, o Brasil coletou
-    <div id="odometerDiv" class="clear" style="width:30%; padding:auto auto;" ></div>
+        <div id="odometerDiv" class="clear" style="width:30%; padding:auto auto;"></div>
 
-    <br \>
-  <br \>
-  <br \>
-  <br \>
-  <br \>
+        <br><br><br><br><br>
 
-    <!-- <div style="color:#000" align="center"> -->
-  <b>TONELADAS</b> de lixo!
-  <!-- </div> -->
+        <b>TONELADAS</b> de lixo!
 
-  <br \>
-  <br \>
-  <br \>
+        <br \><br \><br \>
+      </div>
 
-  </div>
+      <%= yield %>
 
-
-
-
-
-  <%= yield %>
-
-
-  <%= render 'footer' %>
-  </div>
-</body>
+      <%= render 'footer' %>
+    </div>
+  </body>
 </html>
